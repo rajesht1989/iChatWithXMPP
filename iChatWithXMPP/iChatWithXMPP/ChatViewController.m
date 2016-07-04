@@ -49,6 +49,7 @@
         [message addChild:body];
         
         [[self appDelegate].xmppStream sendElement:message];
+        [_textView setText:nil];
     }
 }
 
@@ -56,6 +57,14 @@
 
 - (void)newMessageReceived:(NSString *)message from:(NSString *)from {
     [_chatView setText:[NSString stringWithFormat:@"%@\n%@\n%@\n",_chatView.text,from,message]];
+    [self scrollTextViewToBottom:_chatView];
+}
+
+- (void)scrollTextViewToBottom:(UITextView *)textView {
+    if(textView.text.length > 0 ) {
+        NSRange bottom = NSMakeRange(textView.text.length -1, 1);
+        [textView scrollRangeToVisible:bottom];
+    }
 }
 
 @end

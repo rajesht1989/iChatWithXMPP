@@ -47,26 +47,11 @@
 }
 
 #pragma mark - XMPP
-/*
-- (NSString *)username {
-    if (!_username) {
-        _username = @"user1@ichatwithxmpp.p1.im";
-    }
-    return _username;
-}
 
-- (NSString *)password {
-    if (!_password) {
-        _password = @"user1";
-    }
-    return _password;
-}
-*/
 - (XMPPStream *)xmppStream {
     if (!_xmppStream) {
         _xmppStream = [[XMPPStream alloc] init];
         [_xmppStream setHostName:@"ichatwithxmpp.p1.im"];
-//        [_xmppStream setHostPort:5222];
         [_xmppStream addDelegate:self delegateQueue:dispatch_get_main_queue()];
     }
     return _xmppStream;
@@ -107,11 +92,7 @@
     [_xmppStream disconnect];
 }
 
-
-
-#pragma mark -
 #pragma mark XMPP delegates
-
 
 - (void)xmppStreamDidConnect:(XMPPStream *)sender {
     NSError *error = nil;
@@ -119,7 +100,6 @@
 }
 
 - (void)xmppStreamConnectDidTimeout:(XMPPStream *)sender {
-    
 }
 
 - (void)xmppStreamDidAuthenticate:(XMPPStream *)sender {
@@ -127,7 +107,6 @@
 }
 
 - (void)xmppStream:(XMPPStream *)sender didNotAuthenticate:(NSXMLElement *)error {
-    
 }
 
 - (BOOL)xmppStream:(XMPPStream *)sender didReceiveIQ:(XMPPIQ *)iq {
@@ -135,32 +114,20 @@
 }
 
 - (void)xmppStream:(XMPPStream *)sender didReceiveMessage:(XMPPMessage *)message {
-    
     NSString *msg = [[message elementForName:@"body"] stringValue];
     NSString *from = [[message attributeForName:@"from"] stringValue];
     [_messageDelegate newMessageReceived:msg from:from];
 }
 
 - (void)xmppStream:(XMPPStream *)sender didReceivePresence:(XMPPPresence *)presence {
-    
     NSString *presenceType = [presence type]; // online/offline
     NSString *myUsername = [[sender myJID] user];
     NSString *presenceFromUser = [[presence from] user];
-    
     if (![presenceFromUser isEqualToString:myUsername]) {
-        
         if ([presenceType isEqualToString:@"available"]) {
-            
-//            [_chatDelegate newBuddyOnline:[NSString stringWithFormat:@"%@@%@", presenceFromUser, @"YOURSERVER"]];
-            
         } else if ([presenceType isEqualToString:@"unavailable"]) {
-            
-//            [_chatDelegate buddyWentOffline:[NSString stringWithFormat:@"%@@%@", presenceFromUser, @"YOURSERVER"]];
-            
         }
-        
     }
-    
 }
 
 
