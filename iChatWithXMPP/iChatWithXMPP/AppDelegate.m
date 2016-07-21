@@ -130,6 +130,46 @@
     }
 }
 
+- (void)createRoom:(NSString *)room {
+    XMPPRoomMemoryStorage *roomStorage = [[XMPPRoomMemoryStorage alloc] init];
+    XMPPJID *roomJID = [XMPPJID jidWithString:[NSString stringWithFormat:@"%@@conference.ichatwithxmpp.p1.im",room]];
+    XMPPRoom *xmppRoom = [[XMPPRoom alloc] initWithRoomStorage:roomStorage
+                                                           jid:roomJID
+                                                 dispatchQueue:dispatch_get_main_queue()];
+    
+    [xmppRoom activate:_xmppStream];
+    [xmppRoom addDelegate:self
+            delegateQueue:dispatch_get_main_queue()];
+    
+    [xmppRoom joinRoomUsingNickname:_xmppStream.myJID.user history:nil password:nil];
+}
+
+- (void)xmppRoomDidCreate:(XMPPRoom *)sender {
+    
+}
+
+- (void)xmppRoomDidJoin:(XMPPRoom *)sender {
+    [_roomDelegate roomCreated:sender];
+    [sender fetchConfigurationForm];
+    [sender inviteUser:[XMPPJID jidWithString:@"keithoys"] withMessage:@"Greetings!"];
+}
+
+- (void)xmppRoom:(XMPPRoom *)sender didFetchConfigurationForm:(NSXMLElement *)configForm {
+    NSXMLElement *newConfig = [configForm copy];
+    NSArray *fields = [newConfig elementsForName:@"field"];
+    
+    for (NSXMLElement *field in fields)
+    {
+        NSString *var = [field attributeStringValueForName:@"var"];
+        // Make Room Persistent
+        if ([var isEqualToString:@"muc#roomconfig_persistentroom"]) {
+            [field removeChildAtIndex:0];
+            [field addChild:[NSXMLElement elementWithName:@"value" stringValue:@"1"]];
+        }
+    }
+    
+    [sender configureRoomUsingOptions:newConfig];
+}
 
 #pragma mark - Core Data stack
 

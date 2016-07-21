@@ -11,10 +11,18 @@
 #import "XMPP.h"
 #import "XMPPRoster.h"
 #import "XMPPLogging.h"
+#import "XMPPRoom.h"
+#import "XMPPRoomMemoryStorage.h"
 
 @protocol MessageDelegate <NSObject>
 
 - (void)newMessageReceived:(NSString *)message from:(NSString *)from;
+
+@end
+
+@protocol RoomDelegate <NSObject>
+
+- (void)roomCreated:(XMPPRoom *)room;
 
 @end
 
@@ -32,6 +40,7 @@
 @property (nonatomic, strong) XMPPStream *xmppStream;
 @property (nonatomic, strong) XMPPRoster *xmppRoster;
 @property (nonatomic, assign) id <MessageDelegate> messageDelegate;
+@property (nonatomic, assign) id <RoomDelegate> roomDelegate;
 
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
@@ -44,6 +53,7 @@
 @property (strong, nonatomic) User *user;
 
 - (BOOL)connect;
+- (void)createRoom:(NSString *)room;
 
 @end
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92B5B9121D409CB80047C704 /* GroupChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B5B9111D409CB80047C704 /* GroupChatViewController.m */; };
 		92D2C7971D240FAC001658D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D2C7961D240FAC001658D7 /* main.m */; };
 		92D2C79A1D240FAC001658D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D2C7991D240FAC001658D7 /* AppDelegate.m */; };
 		92D2C79D1D240FAC001658D7 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D2C79C1D240FAC001658D7 /* ChatViewController.m */; };
@@ -20,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		7F778FB2B0E2084D5ED391BD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		92B5B9101D409CB80047C704 /* GroupChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupChatViewController.h; sourceTree = "<group>"; };
+		92B5B9111D409CB80047C704 /* GroupChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupChatViewController.m; sourceTree = "<group>"; };
 		92D2C7921D240FAC001658D7 /* iChatWithXMPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iChatWithXMPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D2C7961D240FAC001658D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		92D2C7981D240FAC001658D7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -83,6 +86,8 @@
 				92D2C7991D240FAC001658D7 /* AppDelegate.m */,
 				92D2C79B1D240FAC001658D7 /* ChatViewController.h */,
 				92D2C79C1D240FAC001658D7 /* ChatViewController.m */,
+				92B5B9101D409CB80047C704 /* GroupChatViewController.h */,
+				92B5B9111D409CB80047C704 /* GroupChatViewController.m */,
 				92D2C7C01D257184001658D7 /* UserListTableViewController.h */,
 				92D2C7C11D257184001658D7 /* UserListTableViewController.m */,
 				92D2C79E1D240FAC001658D7 /* Main.storyboard */,
@@ -232,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92B5B9121D409CB80047C704 /* GroupChatViewController.m in Sources */,
 				92D2C7A31D240FAC001658D7 /* iChatWithXMPP.xcdatamodeld in Sources */,
 				92D2C79D1D240FAC001658D7 /* ChatViewController.m in Sources */,
 				92D2C79A1D240FAC001658D7 /* AppDelegate.m in Sources */,
