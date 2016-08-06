@@ -12,7 +12,7 @@
 
 @end
 
-@interface AppDelegate ()
+@interface AppDelegate () <XMPPStreamDelegate, XMPPRoomDelegate>
 
 @end
 
@@ -151,7 +151,6 @@
 - (void)xmppRoomDidJoin:(XMPPRoom *)sender {
     [_roomDelegate roomCreated:sender];
     [sender fetchConfigurationForm];
-    [sender inviteUser:[XMPPJID jidWithString:@"keithoys"] withMessage:@"Greetings!"];
 }
 
 - (void)xmppRoom:(XMPPRoom *)sender didFetchConfigurationForm:(NSXMLElement *)configForm {

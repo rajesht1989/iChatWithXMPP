@@ -14,9 +14,11 @@
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UITextView *chatView;
 @property (weak, nonatomic) IBOutlet UITextField *groupTextField;
+@property (weak, nonatomic) IBOutlet UIButton *inviteButton;
 
 @property (weak, nonatomic) AppDelegate *appDelegate;
 @property (strong, nonatomic) XMPPRoom *room;
+@property (nonatomic, strong) NSArray *users;
 
 @end
 
@@ -34,14 +36,36 @@
     }
     return _appDelegate;
 }
+
 - (IBAction)createChat:(id)sender {
     if (_groupTextField.text.length > 0) {
         [[self appDelegate] createRoom:_groupTextField.text];
     }
 }
 
+- (NSArray *)users {
+    if (!_users) {
+        _users = @[@"rajesh", @"user1", @"user2", @"user3", @"user4"];
+    }
+    return _users;
+}
+
+- (IBAction)inviteAction:(id)sender {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"Invite people" preferredStyle:UIAlertControllerStyleActionSheet];
+    for (NSString *aUser in [self users]) {
+        [alertController addAction:[UIAlertAction actionWithTitle:aUser style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [_room inviteUser:[XMPPJID jidWithString:action.title] withMessage:@"Greetings!"];
+        }]];
+    }
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
 - (void)roomCreated:(XMPPRoom *)room {
     [self setRoom:room];
+    [_groupTextField setText:nil];
+    [_groupTextField setEnabled:NO];
+    _inviteButton.hidden = NO;
 }
 
 - (IBAction)sendMessageNow:(id)sender

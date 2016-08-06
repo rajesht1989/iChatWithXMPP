@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PiN-Qp-83k" id="CyW-fq-pLH">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -166,7 +166,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Pz-Fg-odp" id="kgR-P6-jFn">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -214,14 +214,14 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2JI-DO-mnI">
-                                <rect key="frame" x="534" y="74" width="46" height="30"/>
-                                <state key="normal" title="Create"/>
+                                <rect key="frame" x="456" y="74" width="87" height="30"/>
+                                <state key="normal" title="Create / Join"/>
                                 <connections>
                                     <action selector="createChat:" destination="0Kr-xZ-hyv" eventType="touchUpInside" id="Gt8-2G-YaQ"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T5o-q1-B88">
-                                <rect key="frame" x="20" y="74" width="504" height="30"/>
+                                <rect key="frame" x="20" y="74" width="426" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -231,29 +231,40 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2K2-MC-laX">
+                                <rect key="frame" x="553" y="74" width="37" height="30"/>
+                                <state key="normal" title="Invite"/>
+                                <connections>
+                                    <action selector="inviteAction:" destination="0Kr-xZ-hyv" eventType="touchUpInside" id="9ZF-b6-KGd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xbo-Ce-HdJ" firstAttribute="top" secondItem="kNg-w9-AJb" secondAttribute="bottom" constant="8" id="1S6-F1-d6x"/>
-                            <constraint firstItem="2JI-DO-mnI" firstAttribute="trailing" secondItem="8uP-3a-q7g" secondAttribute="trailingMargin" id="39c-ES-YjY"/>
                             <constraint firstItem="2JI-DO-mnI" firstAttribute="centerY" secondItem="T5o-q1-B88" secondAttribute="centerY" id="C0M-Tb-VHJ"/>
                             <constraint firstItem="kNg-w9-AJb" firstAttribute="trailing" secondItem="8uP-3a-q7g" secondAttribute="trailingMargin" id="Ghs-ZK-Rfe"/>
                             <constraint firstItem="9J4-PO-v2j" firstAttribute="leading" secondItem="xbo-Ce-HdJ" secondAttribute="trailing" constant="20" id="QoG-R2-GMT"/>
                             <constraint firstItem="9J4-PO-v2j" firstAttribute="centerY" secondItem="xbo-Ce-HdJ" secondAttribute="centerY" id="V6y-48-TxI"/>
                             <constraint firstItem="2JI-DO-mnI" firstAttribute="leading" secondItem="T5o-q1-B88" secondAttribute="trailing" constant="10" id="WZg-ku-jwk"/>
+                            <constraint firstItem="2K2-MC-laX" firstAttribute="leading" secondItem="2JI-DO-mnI" secondAttribute="trailing" constant="10" id="adc-PL-fs4"/>
+                            <constraint firstItem="2K2-MC-laX" firstAttribute="top" secondItem="2JI-DO-mnI" secondAttribute="top" id="k4j-nC-TSm"/>
                             <constraint firstItem="kNg-w9-AJb" firstAttribute="leading" secondItem="8uP-3a-q7g" secondAttribute="leadingMargin" id="nQV-N8-g3x"/>
                             <constraint firstItem="9J4-PO-v2j" firstAttribute="trailing" secondItem="8uP-3a-q7g" secondAttribute="trailingMargin" id="uAc-Nq-QJw"/>
                             <constraint firstItem="xbo-Ce-HdJ" firstAttribute="leading" secondItem="8uP-3a-q7g" secondAttribute="leadingMargin" id="ujO-da-IJR"/>
+                            <constraint firstItem="2K2-MC-laX" firstAttribute="bottom" secondItem="2JI-DO-mnI" secondAttribute="bottom" id="weh-yk-3Qn"/>
                             <constraint firstItem="kNg-w9-AJb" firstAttribute="top" secondItem="T5o-q1-B88" secondAttribute="bottom" constant="10" id="yMu-z1-gdV"/>
                             <constraint firstItem="T5o-q1-B88" firstAttribute="top" secondItem="udq-m5-6Dz" secondAttribute="bottom" constant="10" id="z14-LW-4hG"/>
                             <constraint firstItem="FRx-k9-Eyq" firstAttribute="top" secondItem="xbo-Ce-HdJ" secondAttribute="bottom" constant="250" id="zYU-Gr-Me4"/>
                             <constraint firstItem="T5o-q1-B88" firstAttribute="leading" secondItem="8uP-3a-q7g" secondAttribute="leadingMargin" id="zdi-GR-FUE"/>
+                            <constraint firstItem="2K2-MC-laX" firstAttribute="trailing" secondItem="8uP-3a-q7g" secondAttribute="trailingMargin" constant="10" id="zjo-WB-upb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Message View" id="DYQ-Fj-kTB"/>
                     <connections>
                         <outlet property="chatView" destination="kNg-w9-AJb" id="yAx-zc-RHb"/>
                         <outlet property="groupTextField" destination="T5o-q1-B88" id="SdA-wf-3Ng"/>
+                        <outlet property="inviteButton" destination="2K2-MC-laX" id="ed8-RI-wSj"/>
                         <outlet property="textView" destination="xbo-Ce-HdJ" id="aSM-PF-aAx"/>
                     </connections>
                 </viewController>
