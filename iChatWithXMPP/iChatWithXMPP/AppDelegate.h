@@ -12,6 +12,7 @@
 #import "XMPPRoster.h"
 #import "XMPPLogging.h"
 #import "XMPPRoom.h"
+#import "XMPPMUC.h"
 #import "XMPPRoomMemoryStorage.h"
 
 @protocol MessageDelegate <NSObject>
@@ -38,7 +39,9 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @property (nonatomic, strong) XMPPStream *xmppStream;
-@property (nonatomic, strong) XMPPRoster *xmppRoster;
+//@property (nonatomic, strong) XMPPRoster *xmppRoster;
+@property (nonatomic, strong) XMPPMUC *xmppMuc;
+
 @property (nonatomic, assign) id <MessageDelegate> messageDelegate;
 @property (nonatomic, assign) id <RoomDelegate> roomDelegate;
 

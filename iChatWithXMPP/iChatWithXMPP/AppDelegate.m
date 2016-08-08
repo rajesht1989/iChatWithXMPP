@@ -12,7 +12,7 @@
 
 @end
 
-@interface AppDelegate () <XMPPStreamDelegate, XMPPRoomDelegate>
+@interface AppDelegate () <XMPPStreamDelegate, XMPPRoomDelegate, XMPPMUCDelegate>
 
 @end
 
@@ -104,9 +104,29 @@
 
 - (void)xmppStreamDidAuthenticate:(XMPPStream *)sender {
     [self goOnline];
+    _xmppMuc = [[XMPPMUC alloc] initWithDispatchQueue:dispatch_get_main_queue()];
+    [_xmppMuc activate:_xmppStream];
+    [_xmppMuc addDelegate:self delegateQueue:dispatch_get_main_queue()];
+    [_xmppMuc discoverServices];
 }
 
 - (void)xmppStream:(XMPPStream *)sender didNotAuthenticate:(NSXMLElement *)error {
+}
+
+- (void)xmppMUC:(XMPPMUC *)sender didDiscoverServices:(NSArray *)services {
+    
+}
+
+- (void)xmppMUCFailedToDiscoverServices:(XMPPMUC *)sender withError:(NSError *)error {
+    
+}
+
+- (void)xmppMUC:(XMPPMUC *)sender roomJID:(XMPPJID *) roomJID didReceiveInvitation:(XMPPMessage *)message {
+    NSLog(@"Recieved Room Invitation from = %@ and Message = %@", roomJID, message);
+    XMPPRoom *xmppRoom = [[XMPPRoom alloc] initWithRoomStorage:[[XMPPRoomMemoryStorage alloc] init]
+                                                           jid:roomJID
+                                                 dispatchQueue:dispatch_get_main_queue()];
+    [xmppRoom joinRoomUsingNickname:_xmppStream.myJID.user history:nil password:nil];
 }
 
 - (BOOL)xmppStream:(XMPPStream *)sender didReceiveIQ:(XMPPIQ *)iq {
@@ -145,7 +165,7 @@
 }
 
 - (void)xmppRoomDidCreate:(XMPPRoom *)sender {
-    
+    NSLog(@"xmppRoomDidCreate:");
 }
 
 - (void)xmppRoomDidJoin:(XMPPRoom *)sender {

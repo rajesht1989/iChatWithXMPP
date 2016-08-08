@@ -67,6 +67,7 @@
         [user setUsername:_users[indexPath.row]];
         [user setPassword:_users[indexPath.row]];
         [[self appDelegate] setUser:user];
+        [[[self appDelegate] xmppStream] disconnect];
         [[self appDelegate] connect];
     } else {
         _otherUser = _users[indexPath.row];

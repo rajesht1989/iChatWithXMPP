@@ -108,24 +108,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2A-Hr-1q9">
-                                <rect key="frame" x="544" y="310" width="36" height="30"/>
+                                <rect key="frame" x="544" y="290" width="36" height="30"/>
                                 <state key="normal" title="Send"/>
                                 <connections>
                                     <action selector="sendMessageNow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3gD-jA-PQI"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xnw-Qi-X8X">
+                                <rect key="frame" x="20" y="72" width="560" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kuF-UO-yBa">
-                                <rect key="frame" x="20" y="300" width="504" height="50"/>
+                                <rect key="frame" x="20" y="280" width="504" height="50"/>
                                 <color key="backgroundColor" red="0.87864905810000005" green="0.91219187140000002" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="rGB-4L-utS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xnw-Qi-X8X">
-                                <rect key="frame" x="20" y="72" width="560" height="220"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -136,7 +136,7 @@
                             <constraint firstItem="I2A-Hr-1q9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="FMp-S0-sOe"/>
                             <constraint firstItem="xnw-Qi-X8X" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="WFU-sO-mlT"/>
                             <constraint firstItem="xnw-Qi-X8X" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="b8o-QB-dZ7"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kuF-UO-yBa" secondAttribute="bottom" constant="250" id="dEY-zg-xX4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kuF-UO-yBa" secondAttribute="bottom" constant="270" id="dEY-zg-xX4"/>
                             <constraint firstItem="I2A-Hr-1q9" firstAttribute="centerY" secondItem="kuF-UO-yBa" secondAttribute="centerY" id="gZP-Jc-goD"/>
                             <constraint firstItem="kuF-UO-yBa" firstAttribute="top" secondItem="xnw-Qi-X8X" secondAttribute="bottom" constant="8" id="osP-cA-zaI"/>
                             <constraint firstItem="kuF-UO-yBa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uIz-6M-bbN"/>
@@ -198,14 +198,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9J4-PO-v2j">
-                                <rect key="frame" x="544" y="310" width="36" height="30"/>
+                                <rect key="frame" x="544" y="290" width="36" height="30"/>
                                 <state key="normal" title="Send"/>
                                 <connections>
                                     <action selector="sendMessageNow:" destination="0Kr-xZ-hyv" eventType="touchUpInside" id="nhc-I6-bvQ"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xbo-Ce-HdJ">
-                                <rect key="frame" x="20" y="300" width="504" height="50"/>
+                                <rect key="frame" x="20" y="280" width="504" height="50"/>
                                 <color key="backgroundColor" red="0.87864905810000005" green="0.91219187140000002" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Pfd-ec-cUU"/>
@@ -226,7 +226,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kNg-w9-AJb">
-                                <rect key="frame" x="20" y="114" width="560" height="178"/>
+                                <rect key="frame" x="20" y="114" width="560" height="158"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -255,7 +255,7 @@
                             <constraint firstItem="2K2-MC-laX" firstAttribute="bottom" secondItem="2JI-DO-mnI" secondAttribute="bottom" id="weh-yk-3Qn"/>
                             <constraint firstItem="kNg-w9-AJb" firstAttribute="top" secondItem="T5o-q1-B88" secondAttribute="bottom" constant="10" id="yMu-z1-gdV"/>
                             <constraint firstItem="T5o-q1-B88" firstAttribute="top" secondItem="udq-m5-6Dz" secondAttribute="bottom" constant="10" id="z14-LW-4hG"/>
-                            <constraint firstItem="FRx-k9-Eyq" firstAttribute="top" secondItem="xbo-Ce-HdJ" secondAttribute="bottom" constant="250" id="zYU-Gr-Me4"/>
+                            <constraint firstItem="FRx-k9-Eyq" firstAttribute="top" secondItem="xbo-Ce-HdJ" secondAttribute="bottom" constant="270" id="zYU-Gr-Me4"/>
                             <constraint firstItem="T5o-q1-B88" firstAttribute="leading" secondItem="8uP-3a-q7g" secondAttribute="leadingMargin" id="zdi-GR-FUE"/>
                             <constraint firstItem="2K2-MC-laX" firstAttribute="trailing" secondItem="8uP-3a-q7g" secondAttribute="trailingMargin" constant="10" id="zjo-WB-upb"/>
                         </constraints>

@@ -26,6 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self appDelegate];
 }
 
 - (AppDelegate *)appDelegate {
@@ -54,7 +55,7 @@
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"Invite people" preferredStyle:UIAlertControllerStyleActionSheet];
     for (NSString *aUser in [self users]) {
         [alertController addAction:[UIAlertAction actionWithTitle:aUser style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            [_room inviteUser:[XMPPJID jidWithString:action.title] withMessage:@"Greetings!"];
+            [_room inviteUser:[XMPPJID jidWithString:[NSString stringWithFormat:@"%@@ichatwithxmpp.p1.im",action.title]] withMessage:@"Greetings!"];
         }]];
     }
     [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
