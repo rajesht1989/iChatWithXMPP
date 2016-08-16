@@ -78,15 +78,27 @@
     NSString *messageStr = _textView.text;
     if([messageStr length] > 0)
     {
+        NSXMLElement *message = [NSXMLElement elementWithName:@"message" xmlns:XMPPMUCNamespace];
+        [message addAttributeWithName:@"type" stringValue:@"chat"];
         NSXMLElement *body = [NSXMLElement elementWithName:@"body"];
         [body setStringValue:messageStr];
-        NSXMLElement *message = [NSXMLElement elementWithName:@"message"];
-        [message addAttributeWithName:@"type" stringValue:@"chat"];
         [message addChild:body];
-
-        [_room sendMessage:[XMPPMessage messageFromElement:body]];
+        [_room sendMessage:[XMPPMessage messageFromElement:message]];
         
         [_textView setText:nil];
+/*
+        {
+            [_room sendMessageWithBody:@"Hi All"];
+            
+            NSXMLElement *x = [NSXMLElement elementWithName:@"groupchat" xmlns:XMPPMUCNamespace];
+            
+            XMPPMessage *message = [XMPPMessage message];
+            [message addAttributeWithName:@"to" stringValue:[NSString stringWithFormat:@"%@/%@",[_room.roomJID full],_ro(@"LoginNumber")]];
+            [message addChild:x];
+            NSLog(@"x in Invite === %@",x);
+            [xmppStream sendElement:message];
+        }
+ */
     }
 }
 

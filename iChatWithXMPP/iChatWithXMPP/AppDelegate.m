@@ -123,9 +123,9 @@
 
 - (void)xmppMUC:(XMPPMUC *)sender roomJID:(XMPPJID *) roomJID didReceiveInvitation:(XMPPMessage *)message {
     NSLog(@"Recieved Room Invitation from = %@ and Message = %@", roomJID, message);
-    XMPPRoom *xmppRoom = [[XMPPRoom alloc] initWithRoomStorage:[[XMPPRoomMemoryStorage alloc] init]
-                                                           jid:roomJID
-                                                 dispatchQueue:dispatch_get_main_queue()];
+    XMPPRoom *xmppRoom = [[XMPPRoom alloc] initWithRoomStorage:[[XMPPRoomMemoryStorage alloc] init] jid:roomJID dispatchQueue:dispatch_get_main_queue()];
+    [xmppRoom activate:[self xmppStream]];
+    [xmppRoom addDelegate:self delegateQueue:dispatch_get_main_queue()];
     [xmppRoom joinRoomUsingNickname:_xmppStream.myJID.user history:nil password:nil];
 }
 
