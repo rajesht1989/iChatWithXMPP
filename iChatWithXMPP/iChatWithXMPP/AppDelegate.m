@@ -97,24 +97,46 @@
 - (void)xmppStreamDidConnect:(XMPPStream *)sender {
     NSError *error = nil;
     [[self xmppStream] authenticateWithPassword:_user.password error:&error];
+    NSLog(@"xmppStreamDidConnect : %@",sender);
 }
 
 - (void)xmppStreamConnectDidTimeout:(XMPPStream *)sender {
+    NSLog(@"xmppStreamConnectDidTimeout : %@",sender);
 }
 
 - (void)xmppStreamDidAuthenticate:(XMPPStream *)sender {
+    NSLog(@"xmppStreamDidAuthenticate : %@",sender);
     [self goOnline];
     _xmppMuc = [[XMPPMUC alloc] initWithDispatchQueue:dispatch_get_main_queue()];
     [_xmppMuc activate:_xmppStream];
     [_xmppMuc addDelegate:self delegateQueue:dispatch_get_main_queue()];
     [_xmppMuc discoverServices];
+    [_xmppMuc discoverRoomsForServiceNamed:@"conference.ichatwithxmpp.p1.im"];
+    
+//    XMPPJID *servrJID = [XMPPJID jidWithString:@"conference.ichatwithxmpp.p1.im"];
+//    XMPPIQ *iq = [XMPPIQ iqWithType:@"get" to:servrJID];
+//    [iq addAttributeWithName:@"from" stringValue:[[self xmppStream] myJID].full];
+//    NSXMLElement *query = [NSXMLElement elementWithName:@"query"];
+//    [query addAttributeWithName:@"xmlns" stringValue:XMPPDiscoItemsNamespace];
+//    [iq addChild:query];
+//    [[self xmppStream] sendElement:iq];
 }
 
 - (void)xmppStream:(XMPPStream *)sender didNotAuthenticate:(NSXMLElement *)error {
+    NSLog(@"didNotAuthenticate : %@",sender);
 }
 
 - (void)xmppMUC:(XMPPMUC *)sender didDiscoverServices:(NSArray *)services {
-    
+    NSLog(@"didDiscoverServices: %@",services);
+}
+
+- (void)xmppMUC:(XMPPMUC *)sender didDiscoverRooms:(NSArray *)rooms forServiceNamed:(NSString *)serviceName {
+    NSLog(@"didDiscoverRooms: %@ %@ %@",sender, rooms , serviceName);
+}
+
+- (void)xmppMUC:(XMPPMUC *)sender failedToDiscoverRoomsForServiceNamed:(NSString *)serviceName withError:(NSError *)error {
+    NSLog(@"failedToDiscoverRoomsForServiceNamed: %@",sender);
+    NSLog(@"error %@",error);
 }
 
 - (void)xmppMUCFailedToDiscoverServices:(XMPPMUC *)sender withError:(NSError *)error {
@@ -130,16 +152,19 @@
 }
 
 - (BOOL)xmppStream:(XMPPStream *)sender didReceiveIQ:(XMPPIQ *)iq {
+    NSLog(@"didReceiveIQ: %@",iq);
     return NO;
 }
 
 - (void)xmppStream:(XMPPStream *)sender didReceiveMessage:(XMPPMessage *)message {
+    NSLog(@"didReceiveMessage: %@",message);
     NSString *msg = [[message elementForName:@"body"] stringValue];
     NSString *from = [[message attributeForName:@"from"] stringValue];
     [_messageDelegate newMessageReceived:msg from:from];
 }
 
 - (void)xmppStream:(XMPPStream *)sender didReceivePresence:(XMPPPresence *)presence {
+    NSLog(@"didReceivePresence: %@",presence);
     NSString *presenceType = [presence type]; // online/offline
     NSString *myUsername = [[sender myJID] user];
     NSString *presenceFromUser = [[presence from] user];
@@ -165,10 +190,11 @@
 }
 
 - (void)xmppRoomDidCreate:(XMPPRoom *)sender {
-    NSLog(@"xmppRoomDidCreate:");
+    NSLog(@"xmppRoomDidCreate: %@",sender);
 }
 
 - (void)xmppRoomDidJoin:(XMPPRoom *)sender {
+    NSLog(@"xmppRoomDidJoin: %@",sender);
     [_roomDelegate roomCreated:sender];
     [sender fetchConfigurationForm];
 }

@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatWithXMPP/AppDelegate.m"
-            timestampString = "492307990.199404"
+            timestampString = "493102325.872301"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "-xmppStream:didNotAuthenticate:"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatWithXMPP/AppDelegate.m"
-            timestampString = "492307514.580735"
+            timestampString = "493101840.690675"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "-xmppStreamDidAuthenticate:"
             landmarkType = "5">
          </BreakpointContent>
@@ -96,54 +96,6 @@
             startingLineNumber = "55"
             endingLineNumber = "55"
             landmarkName = "-xmppStream"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pods/XMPPFramework/Core/XMPPStream.m"
-            timestampString = "488911772.048452"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1057"
-            endingLineNumber = "1057"
-            landmarkName = "-connectWithTimeout:error:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pods/XMPPFramework/Core/XMPPStream.m"
-            timestampString = "488911811.028852"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1063"
-            endingLineNumber = "1063"
-            landmarkName = "-connectWithTimeout:error:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pods/XMPPFramework/Core/XMPPStream.m"
-            timestampString = "488911870.137016"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1036"
-            endingLineNumber = "1036"
-            landmarkName = "-connectToHost:onPort:withTimeout:error:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -230,15 +182,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatWithXMPP/AppDelegate.m"
-            timestampString = "492309918.010062"
+            timestampString = "493102555.447407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
             landmarkName = "-xmppStream:didReceiveMessage:"
             landmarkType = "5">
          </BreakpointContent>
@@ -246,15 +198,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatWithXMPP/AppDelegate.m"
-            timestampString = "492309918.010062"
+            timestampString = "493102555.447407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
             landmarkName = "-createRoom:"
             landmarkType = "5">
          </BreakpointContent>
@@ -262,15 +214,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatWithXMPP/AppDelegate.m"
-            timestampString = "492309918.010062"
+            timestampString = "493102555.447407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
             landmarkName = "-xmppRoomDidCreate:"
             landmarkType = "5">
          </BreakpointContent>
@@ -278,15 +230,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatWithXMPP/AppDelegate.m"
-            timestampString = "492309918.010062"
+            timestampString = "493102555.447407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
             landmarkName = "-xmppRoom:didFetchConfigurationForm:"
             landmarkType = "5">
          </BreakpointContent>
@@ -298,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatWithXMPP/AppDelegate.m"
-            timestampString = "492307990.199404"
+            timestampString = "493102325.872301"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "-xmppStreamDidAuthenticate:"
             landmarkType = "5">
          </BreakpointContent>
@@ -326,7 +278,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatWithXMPP/GroupChatViewController.m"
@@ -346,11 +298,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatWithXMPP/AppDelegate.m"
-            timestampString = "492309918.010062"
+            timestampString = "493102555.447407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
             landmarkName = "-xmppStream:didReceivePresence:"
             landmarkType = "5">
          </BreakpointContent>
@@ -362,11 +314,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatWithXMPP/AppDelegate.m"
-            timestampString = "492309918.010062"
+            timestampString = "493102555.447407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "-xmppStream:didReceiveIQ:"
             landmarkType = "5">
          </BreakpointContent>
@@ -378,11 +330,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatWithXMPP/AppDelegate.m"
-            timestampString = "492307514.580735"
+            timestampString = "493101840.690675"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "-xmppStreamDidConnect:"
             landmarkType = "5">
          </BreakpointContent>
@@ -406,7 +358,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatWithXMPP/GroupChatViewController.m"
@@ -422,7 +374,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatWithXMPP/GroupChatViewController.m"
@@ -438,15 +390,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatWithXMPP/AppDelegate.m"
-            timestampString = "492309966.80147"
+            timestampString = "493102505.901415"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
             landmarkName = "-xmppMUC:roomJID:didReceiveInvitation:"
             landmarkType = "5">
          </BreakpointContent>
@@ -454,15 +406,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatWithXMPP/AppDelegate.m"
-            timestampString = "493050482.218313"
+            timestampString = "493102555.447407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
             landmarkName = "-xmppRoomDidJoin:"
             landmarkType = "5">
          </BreakpointContent>
@@ -470,15 +422,63 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatWithXMPP/AppDelegate.m"
-            timestampString = "493050629.601839"
+            timestampString = "493102505.901415"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "-xmppMUC:failedToDiscoverRoomsForServiceNamed:withError:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iChatWithXMPP/AppDelegate.m"
+            timestampString = "493102325.872301"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "-xmppMUC:didDiscoverRooms:forServiceNamed:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/XMPPFramework/Extensions/XEP-0045/XMPPMUC.m"
+            timestampString = "493100462.893843"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
+            landmarkName = "-discoverRoomsForServiceNamed:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iChatWithXMPP/AppDelegate.m"
+            timestampString = "493101840.690675"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "-xmppStreamDidAuthenticate:"
             landmarkType = "5">
          </BreakpointContent>
@@ -489,62 +489,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/XMPPFramework/Extensions/XEP-0045/XMPPRoom.m"
-            timestampString = "493051891.97894"
+            filePath = "iChatWithXMPP/AppDelegate.m"
+            timestampString = "493102319.522119"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "869"
-            endingLineNumber = "869"
-            landmarkName = "-sendMessage:"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "-xmppStreamDidAuthenticate:"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pods/XMPPFramework/Extensions/XEP-0045/XMPPRoom.m"
-            timestampString = "493051894.591303"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "867"
-            endingLineNumber = "867"
-            landmarkName = "-sendMessage:"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[XMPPRoom sendMessage:]"
-                  moduleName = "iChatWithXMPP"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rajesh-2497/Documents/Github%20Repo/iChatWithXMPP/iChatWithXMPP/Pods/XMPPFramework/Extensions/XEP-0045/XMPPRoom.m"
-                  timestampString = "493053334.111928"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "867"
-                  endingLineNumber = "867"
-                  offsetFromSymbolStart = "64">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__24-[XMPPRoom sendMessage:]_block_invoke"
-                  moduleName = "iChatWithXMPP"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rajesh-2497/Documents/Github%20Repo/iChatWithXMPP/iChatWithXMPP/Pods/XMPPFramework/Extensions/XEP-0045/XMPPRoom.m"
-                  timestampString = "493053334.11207"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "867"
-                  endingLineNumber = "867"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -553,13 +505,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/XMPPFramework/Core/XMPPStream.m"
-            timestampString = "493051985.802682"
+            filePath = "iChatWithXMPP/AppDelegate.m"
+            timestampString = "493102321.285461"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2552"
-            endingLineNumber = "2552"
-            landmarkName = "-sendElement:"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "-xmppStreamDidAuthenticate:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

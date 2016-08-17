@@ -14,6 +14,7 @@
 #import "XMPPRoom.h"
 #import "XMPPMUC.h"
 #import "XMPPRoomMemoryStorage.h"
+#import "XMPPConstants.h"
 
 @protocol MessageDelegate <NSObject>
 
