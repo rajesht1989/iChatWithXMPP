@@ -31,7 +31,7 @@
 
 - (AppDelegate *)appDelegate {
     if (!_appDelegate) {
-        _appDelegate = [[UIApplication sharedApplication] delegate];
+        _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         [_appDelegate setRoomDelegate:self];
         [_appDelegate setMessageDelegate:self];
     }

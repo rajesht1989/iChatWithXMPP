@@ -30,7 +30,7 @@
 
 - (AppDelegate *)appDelegate {
     if (!_appDelegate) {
-        _appDelegate = [[UIApplication sharedApplication] delegate];
+        _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         [_appDelegate setMessageDelegate:self];
     }
     return _appDelegate;

@@ -39,7 +39,7 @@
 
 - (NSArray *)users {
     if (!_users) {
-        _users = @[@"rajesh", @"user1", @"user2", @"user3", @"user4"];
+        _users = @[@"rajesh", @"user1", @"user2"];
     }
     return _users;
 }
